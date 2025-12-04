@@ -1,0 +1,559 @@
+header {
+  &::after {
+    display: none;
+  }
+  &::before {
+    display: none;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0px 120px;
+  max-width: 1660px;
+  width: 100%;
+}
+.section_info_user {
+  flex: 2;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.conteiner_info_user {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & h2 {
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 50px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  & h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(104, 109, 224, 1);
+  }
+}
+.conteiner_user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1073px;
+  height: auto;
+
+  & img {
+    max-width: 149.58175659179688px;
+    width: 100%;
+    max-height: 150px;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+.card_user {
+  max-width: 893.5018310546875px;
+  width: 100%;
+  height: auto;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  & h3 {
+    font-family: Gilroy SemiBold;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 36px;
+
+    line-height: 100%;
+  }
+
+  & p {
+    font-family: Gilroy;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 15px;
+
+    line-height: 100%;
+  }
+}
+.account_user {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+  position: relative;
+
+  & h3 {
+    font-family: Gilroy Bold;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 100%;
+  }
+}
+.conteiner_sicial_account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-left: 10px;
+  max-width: 365px;
+  opacity: 1;
+
+  transition: opacity 0.3s ease;
+
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+
+  & img {
+    max-width: 100px;
+    width: 100%;
+
+    max-height: 100px;
+    height: auto;
+    border-radius: 50%;
+  }
+  &.hidden {
+    display: none;
+    opacity: 0;
+  }
+  &:not(.hidden) {
+    display: flex;
+    opacity: 1;
+  }
+}
+.conteiner_socialLinks_user {
+  gap: 80px;
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  & button {
+    //   position: absolute;
+    font-size: 2.5rem;
+    transition: 1s ease-in;
+    opacity: 0.5;
+  }
+  & button:hover {
+    opacity: 1;
+  }
+  & .buttonPrev {
+    left: 0;
+    transition: 1s ease-in;
+
+    &:hover {
+      transform: translateX(-50px) scale(2);
+    }
+  }
+  & .buttonNext {
+    transition: 1s ease-in;
+    right: 0;
+
+    &:hover {
+      transform: translateX(50px) scale(2);
+    }
+  }
+}
+
+.social__link {
+  position: absolute;
+  left: 0;
+
+  z-index: 1;
+
+  & img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  gap: 5px;
+  padding-left: 10px;
+
+  & h4 {
+    font-family: Gilroy SemiBold;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+
+    line-height: 100%;
+  }
+
+  & a {
+    font-family: Gilroy;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 100%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: rgba(217, 217, 217, 1);
+  }
+}
+.conteiner_love_cinema_user {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.conteinerName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h2 {
+    font-family: Gilroy Bold;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+
+  & button {
+    color: rgba(255, 255, 255, 1);
+
+    font-family: Gilroy Medium;
+    font-weight: 500;
+    font-size: 20px;
+
+    line-height: 100%;
+    background-color: transparent;
+    text-align: right;
+    text-decoration: underline;
+  }
+}
+.conteiner__desctiption__user {
+  position: relative;
+  & .button__change__descriptionUser {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    color: red;
+  }
+}
+
+.conteiner_love_cinema {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 32px;
+  gap: 25px;
+}
+.card_cinema {
+  max-width: 343.48675537109375px;
+  //   width: 1005px;
+  height: auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  & img {
+    max-width: 102.8403549194336px;
+    width: 100%;
+    max-height: 150px;
+    height: auto;
+
+    border-radius: 5px;
+  }
+}
+.conteinerDescription {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.section_trends {
+  flex: 1;
+  max-width: 542.0408325195312px;
+  height: auto;
+  width: 100%;
+  & img {
+    max-width: 213.01248168945312px;
+    width: 100%;
+    max-height: 180px;
+    height: auto;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+.users {
+}
+.conteiner_trends {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  & h2 {
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100%;
+  }
+}
+.card_trend {
+  max-width: 542.0408325195312px;
+  max-height: 180px;
+  height: auto;
+
+  border: 1.5px solid rgba(104, 109, 224, 1);
+  box-shadow: 0px 0px 30px 0px rgba(146, 146, 146, 0.2);
+
+  background-color: rgba(44, 44, 84, 1);
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+  & p {
+    font-family: Gilroy Medium;
+    font-weight: 500;
+    font-size: 11px;
+
+    line-height: 130%;
+    letter-spacing: 0%;
+  }
+}
+.card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  & a {
+    font-family: Gilroy Medium;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(104, 109, 224, 1);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 20px 10px;
+
+    & h2,
+    & h3 {
+      white-space: nowrap;
+      font-size: 1.7rem;
+    }
+
+    & p {
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+  }
+
+  .conteiner_socialLinks_user {
+    gap: 0;
+    grid-template-columns: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    & button {
+      position: absolute;
+      font-size: 2.5rem;
+      transition: 1s ease-in;
+      opacity: 0.5;
+    }
+    & button:hover {
+      opacity: 1;
+    }
+    & .buttonPrev {
+      left: 0;
+      transition: 1s ease-in;
+
+      &:hover {
+        transform: translateX(-100px) scale(3);
+      }
+    }
+    & .buttonNext {
+      transition: 1s ease-in;
+      right: 0;
+
+      &:hover {
+        transform: translateX(100px) scale(3);
+      }
+    }
+  }
+  .conteiner_love_cinema_user {
+    justify-content: center;
+    align-items: center;
+  }
+  .conteinerName {
+    & h2 {
+      font-size: 1.5rem;
+      white-space: pre-wrap;
+    }
+  }
+  .conteiner_love_cinema {
+    grid-template-columns: repeat(auto);
+    align-items: center;
+    justify-content: center;
+  }
+  .card_cinema {
+    justify-content: center;
+  }
+  .card_trend {
+    flex-direction: column;
+    max-height: 100%;
+    align-items: center;
+  }
+  .card {
+    box-sizing: border-box;
+    flex: 1;
+  }
+}
+//стили для js
+.modaldescp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & textarea {
+    width: 300px;
+    height: 100px;
+  }
+
+  & div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.conteiner__buttonModalDescp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 20px 10px;
+
+    & h2,
+    & h3 {
+      white-space: nowrap;
+      font-size: 2rem;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+
+  .conteiner_socialLinks_user {
+    gap: 0;
+    // grid-template-columns: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    & button {
+      position: absolute;
+      font-size: 2.5rem;
+      transition: 1s ease-in;
+      opacity: 0.5;
+    }
+    & button:hover {
+      opacity: 1;
+    }
+    & .buttonPrev {
+      left: 0;
+      transition: 1s ease-in;
+
+      &:hover {
+        transform: translateX(-100px) scale(3);
+      }
+    }
+    & .buttonNext {
+      transition: 1s ease-in;
+      right: 0;
+
+      &:hover {
+        transform: translateX(100px) scale(3);
+      }
+    }
+  }
+  .conteiner_love_cinema_user {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .conteinerName {
+    display: flex;
+    justify-content: space-between;
+    & h2 {
+      font-size: 1.5rem;
+      white-space: pre-wrap;
+    }
+  }
+  .conteiner_love_cinema {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+  .card_cinema {
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  .card_trend {
+    flex-direction: column;
+    max-height: 100%;
+    align-items: center;
+  }
+  .card {
+    box-sizing: border-box;
+    flex: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .conteiner_socialLinks_user {
+  }
+}

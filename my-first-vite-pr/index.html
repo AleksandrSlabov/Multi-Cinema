@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MultiCinema</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <nav class="nav">
+        <img src="/imagesIcon/logo.svg" alt="" />
+        <ul class="navLinksHeader">
+          <li><a href="#">Фильмы</a></li>
+          <li><a href="#">Тренды</a></li>
+          <li><a href="#">Новости</a></li>
+        </ul>
+        <button class="hamburger" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__hamburger">
+          <button class="humburger__close">&#10006;</button>
+          <ol class="ol_modal_hamburger">
+            <li><a href="#">Фильмы</a></li>
+            <li><a href="#">Тренды</a></li>
+            <li><a href="#">Новости</a></li>
+
+            <div>
+              <button>
+                <img src="/imagesIcon/buttonSearce.svg" alt="" />
+              </button>
+              <input
+                class="input__search"
+                placeholder="Введите название "
+                type="search"
+              />
+
+              <button class="btn__registr__user">
+                <img src="/imagesIcon/buttonProfile.svg" alt="" />
+              </button>
+            </div>
+          </ol>
+        </div>
+        <div class="navSearchAndPersAccount">
+          <ul>
+            <li>
+              <button>
+                <img src="/imagesIcon/buttonSearce.svg" alt="" />
+              </button>
+              <input
+                class="input__search"
+                placeholder="Введите название "
+                type="search"
+              />
+            </li>
+            <li>
+              <button class="btn__registr__user">
+                <img src="/imagesIcon/buttonProfile.svg" alt="" />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="descriptionHeader">
+        <h2>Фильмы, сериалы, мультфильмы в одном месте!</h2>
+        <p>
+          Всегда хотели узнать где можно дешевле посмотреть то или иное
+          произведение исскуства? Просто обсудить какой-то либо кинофраншизу? А
+          может просто посмотреть последние новости в сфере кино?Тогда, данный
+          сайт был сделан для вас!
+        </p>
+        <button>Посмотреть каталог фильмов</button>
+      </div>
+     
+    <main>
+      <section class="sectionOne">
+        <h2>Самый популярный фильм недели</h2>
+        <div class="sectionSlider">
+          <div class="sectionSliderConteiner">
+            <button class="arrow-6 arrow__left">
+              <svg
+                width="18px"
+                height="17px"
+                viewBox="0 0 18 17"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)"
+                >
+                  <polygon
+                    class="arrow-6-pl"
+                    points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
+                  ></polygon>
+                  <polygon
+                    class="arrow-6-pl-fixed"
+                    points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
+                  ></polygon>
+                  <path
+                    d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+            <div class="slider">
+              <img
+                class="img__slider"
+                src="/public/filmWeek/filmWeek.jpg"
+                alt=""
+              />
+              <img
+                class="img__slider hidden"
+                src="/public/filmWeek/filmWeek1.jpg"
+                alt=""
+              />
+              <img
+                class="img__slider hidden"
+                src="/public/filmWeek/filmWeek2.jpg"
+                alt=""
+              />
+              <img
+                class="img__slider hidden"
+                src="/public/filmWeek/filmWeek3.jpg"
+                alt=""
+              />
+            </div>
+            <button class="arrow-6 arrow__rigth">
+              <svg
+                width="18px"
+                height="17px"
+                viewBox="-1 0 18 17"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g>
+                  <polygon
+                    class="arrow-6-pl"
+                    points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
+                  ></polygon>
+                  <polygon
+                    class="arrow-6-pl-fixed"
+                    points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
+                  ></polygon>
+                  <path
+                    d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <button class="sectionSlider_BtnLook">Посмотреть</button>
+        </div>
+      </section>
+      <section class="sectionTwoo">
+        <h2>Вы хотели посмотреть</h2>
+        <div class="sectionWatchLater">
+          <div class="sectionProductConteiner">
+            <img src="/public/watchLaterFilm/watchLaterFilm.jpg" alt="" />
+
+            <button>Посмотреть</button>
+          </div>
+          <div class="sectionProductConteiner">
+            <img src="/public/watchLaterFilm/watchLaterFilm1.jpg" alt="" />
+
+            <button>Посмотреть</button>
+          </div>
+          <div class="sectionProductConteiner">
+            <img src="/public/watchLaterFilm/watchLaterFilm2.jpg" alt="" />
+
+            <button>Посмотреть</button>
+          </div>
+          <div class="sectionProductConteiner">
+            <img src="/public/watchLaterFilm/watchLaterFilm3.jpg" alt="" />
+
+            <button>Посмотреть</button>
+          </div>
+          <div class="sectionProductConteiner">
+            <img src="/public/watchLaterFilm/watchLaterFilm4.jpg" alt="" />
+
+            <button>Посмотреть</button>
+          </div>
+          <div class="sectionProductConteiner">
+            <img src="/public/watchLaterFilm/watchLaterFilm5.jpg" alt="" />
+
+            <button>Посмотреть</button>
+          </div>
+        </div>
+        <button class="btn__full__list">Полный список</button>
+      </section>
+
+      <section class="sectionTree">
+        <!-- <img class="volna3" src="/public/volna/volna3.svg" alt="volna3" /> -->
+        <div class="mainnews">
+          <img src="/public/newsFilm/newsFilm.jpg" alt="" />
+          <p>
+            The CW заказал пилотные серии «Рыцарей Готэма» и спин-оффа о
+            родителях Винчестеров
+          </p>
+        </div>
+        <div class="news">
+          <div class="conteinerNewsandNewsAll">
+            <h2>Новости</h2>
+            <button class="btn__full__list">Читать все</button>
+          </div>
+
+          <div class="conteinerNews">
+            <div class="conteinerNews__Card">
+              <img src="/public/newsFilm/newsFilm1.jpg" alt="логотипНовостей" />
+              <div class="descriptionNews">
+                <h3>Дисней выпустит первый хоррор</h3>
+                <p>
+                  Равным образом рамки и место обучения кадров обеспечивает
+                  широкому кругу (специалистов) участие в формировании
+                  дальнейших направлений развития...
+                </p>
+              </div>
+            </div>
+            <div class="conteinerNews__Card">
+              <img src="/public/newsFilm/newsFilm2.jpg" alt="логотипНовостей" />
+              <div class="descriptionNews">
+                <h3>Дисней выпустит первый хоррор</h3>
+                <p>
+                  Равным образом рамки и место обучения кадров обеспечивает
+                  широкому кругу (специалистов) участие в формировании
+                  дальнейших направлений развития...
+                </p>
+              </div>
+            </div>
+            <div class="conteinerNews__Card">
+              <img src="/public/newsFilm/newsFilm3.jpg" alt="логотипНовостей" />
+              <div class="descriptionNews">
+                <h3>Дисней выпустит первый хоррор</h3>
+                <p>
+                  Равным образом рамки и место обучения кадров обеспечивает
+                  широкому кругу (специалистов) участие в формировании
+                  дальнейших направлений развития...
+                </p>
+              </div>
+            </div>
+            <div class="conteinerNews__Card">
+              <img src="/public/newsFilm/newsFilm4.jpg" alt="логотипНовостей" />
+              <div class="descriptionNews">
+                <h3>Дисней выпустит первый хоррор</h3>
+                <p>
+                  Равным образом рамки и место обучения кадров обеспечивает
+                  широкому кругу (специалистов) участие в формировании
+                  дальнейших направлений развития...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <img class="volna4" src="/public/volna/volna4.svg" alt="volna4" /> -->
+      </section>
+
+      <section class="sectionFo">
+        <!-- <img class="volna5" src="/public/volna/volna5.svg" alt="volna5" /> -->
+        <div class="SectionConteinerForum">
+          <h2>Форум</h2>
+          <button class="btn__full__list">Все тренды</button>
+        </div>
+        <div class="conteinerForum">
+          <div class="forum">
+            <img
+              src="/public/logoCompanyCinema/logoCimpanyCinema.jpg"
+              alt="logo forum"
+            />
+            <div class="forumDescription">
+              <div>
+                <h3>Кино</h3>
+                <p>
+                  В данном треде, Вы сможете узнать намного больше про
+                  киновселенную от Bubble про великого майора полиции - Игоря
+                  Грома
+                </p>
+              </div>
+              <a href="#">Подробнее &#8594;</a>
+            </div>
+          </div>
+          <div class="forum">
+            <img
+              src="/public/logoCompanyCinema/logoCompanyCinema2.jpg"
+              alt="logo forum"
+            />
+            <div class="forumDescription">
+              <div>
+                <h3>Кино</h3>
+                <p>
+                  В данном треде, Вы сможете узнать намного больше про
+                  киновселенную от Bubble про великого майора полиции - Игоря
+                  Грома
+                </p>
+              </div>
+
+              <a href="#">Подробнее &#8594;</a>
+            </div>
+          </div>
+          <div class="forum">
+            <img
+              src="/public/logoCompanyCinema/logoCompanyCinema4.png"
+              alt="logo forum"
+            />
+            <div class="forumDescription">
+              <div>
+                <h3>Кино</h3>
+                <p>
+                  В данном треде, Вы сможете узнать намного больше про
+                  киновселенную от Bubble про великого майора полиции - Игоря
+                  Грома
+                </p>
+              </div>
+
+              <a href="#">Подробнее &#8594;</a>
+            </div>
+          </div>
+          <div class="forum">
+            <img
+              src="/public/logoCompanyCinema/logoCompanyCinema3.jpg"
+              alt="logo forum"
+            />
+            <div class="forumDescription">
+              <div>
+                <h3>Кино</h3>
+                <p>
+                  В данном треде, Вы сможете узнать намного больше про
+                  киновселенную от Bubble про великого майора полиции - Игоря
+                  Грома
+                </p>
+              </div>
+
+              <a href="#">Подробнее &#8594;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="conteinerNewsLetter">
+        <p>
+          Подпишитесь на нашу рассылку прямо сейчас, всего за 9.99$/мес, и
+          будьте в курсе всех новостей, скидок на подписки и понижении цен на
+          фильмы.
+        </p>
+        <div class="conteinerInputAndButton">
+          <input type="email" placeholder="ваш email" />
+          <button>Подписаться</button>
+        </div>
+        <p class="subscribe">
+          Нажимая на кнопку “Подписаться”, вы принимаете правила
+          пользовательского соглашения
+        </p>
+      </div>
+      <nav>
+        <img src="/imagesIcon/logo.svg" alt="" />
+        <ul class="navLinksHeader">
+          <li><a href="#">Фильмы</a></li>
+          <li><a href="#">Тренды</a></li>
+          <li><a href="#">Новости</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+
+<!-- <div class="loginToProfileOrRegistr">
+<button class="loginToProfile button__modal">Войти в профиль</button>
+<div class="conteinerLoginPtofile">
+  <input type="text" placeholder="Name" required>
+  <input type="password" placeholder="password" required>
+</div>
+
+<button class="formRegistr button__Modal">Зарегестрироваться </button>
+
+<form action="">
+  <input type="text" placeholder="Name" required>
+  <input type="text" placeholder="Surname" >
+  <input type="email" placeholder="email" required>
+  <input type="password" placeholder="password" required>
+
+  <button>Зарегестрироваться </button>
+
+</form>
+</div> -->
+
