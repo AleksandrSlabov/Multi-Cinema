@@ -3,19 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=20.0.0",  // ← ДОБАВЬТЕ ЭТОТ БЛОК
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "npm:rolldown-vite@7.1.14"
-  },
-  "overrides": {
-    "vite": "npm:rolldown-vite@7.1.14"
-  },
-  "dependencies": {
-    "-": "^0.0.1",
-    "sass-embedded": "^1.93.3"
+    "sass": "^1.69.5",
+    "vite": "^5.0.0"
   }
 }
