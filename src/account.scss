@@ -369,12 +369,29 @@ header {
 @media (min-width: 320px) and (max-width: 576px) {
   .content-wrapper {
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 0px;
+    & .conteiner_info_user {
+      align-items: center;
+      justify-content: center;
+      & .conteiner_user {
+        gap: 10px;
+      }
+    }
 
     & h2,
     & h3 {
       white-space: nowrap;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
+    }
+    & .card_user {
+      padding: 0;
+    }
+    & .textAreaDescp {
+      width: 150px;
+      height: 100px;
+    }
+    & .button__change__descriptionUser {
+      top: -35%;
     }
 
     & p {
