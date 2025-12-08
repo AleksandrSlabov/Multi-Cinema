@@ -1,26 +1,20 @@
-console.log("functionSlider");
-
-//slider
+import { elementSlider } from "./selectors";
 
 export function initSlider() {
-  const buttonArrowR = document.querySelector(".arrow__rigth");
-  const buttonArrowL = document.querySelector(".arrow__left");
-  const slideImg = document.querySelectorAll(".img__slider");
-
   let currentSlide = 0;
 
   // Инициализация - показываем первый слайд
-  if (slideImg.length > 0) {
-    slideImg.forEach((el) => el.classList.add("hidden"));
-    slideImg[0].classList.remove("hidden");
+  if (elementSlider.sliderImage.length > 0) {
+    elementSlider.sliderImage.forEach((el) => el.classList.add("hidden"));
+    elementSlider.sliderImage[0].classList.remove("hidden");
   }
 
-  buttonArrowR.addEventListener("click", function () {
-    currentSlide = sliderModal(currentSlide + 1, slideImg);
+  elementSlider.buttonArrowRigth.addEventListener("click", function () {
+    currentSlide = sliderModal(currentSlide + 1, elementSlider.sliderImage);
   });
 
-  buttonArrowL.addEventListener("click", function () {
-    currentSlide = sliderModal(currentSlide - 1, slideImg);
+  elementSlider.buttonArrowLeft.addEventListener("click", function () {
+    currentSlide = sliderModal(currentSlide - 1, elementSlider.sliderImage);
   });
 }
 

@@ -1,14 +1,13 @@
 import "./account.scss";
 import "./style.scss";
 import { initHamburger } from "./functionHamburger.js";
+import { element } from "./selectors.js";
 
 console.log("Account page loaded");
 console.log("localStorage:", localStorage);
 
 initHamburger();
 
-const descriptionUser = document.querySelector(".descriptionUser");
-const firstNameUser = document.querySelector(".nameUser");
 let localStorageCurrentUser = null;
 
 // Загрузка текущего пользователя
@@ -22,7 +21,7 @@ if (localStorage.getItem("currentUser")) {
         ? surname.charAt(0).toUpperCase() + surname.slice(1)
         : "";
 
-      firstNameUser.textContent = `${localStorageCurrentUser.Name} ${formattedSurname}`;
+      element.firstNameUser.textContent = `${localStorageCurrentUser.Name} ${formattedSurname}`;
       updateDescriptionDisplay();
     }
   } catch (error) {
@@ -30,28 +29,18 @@ if (localStorage.getItem("currentUser")) {
   }
 }
 
-const changeDescription = document.querySelector(
-  ".button__change__descriptionUser"
-);
-const conteinerDescp = document.querySelector(".conteiner__desctiption__user");
-const defaultDescp = `
-  <button class="button__change__descriptionUser">&#9997;</button>
-  <p class="descriptionUser"></p>
-`;
-
 // Функция для обновления отображения описания
 function updateDescriptionDisplay() {
-  const descriptionUser = document.querySelector(".descriptionUser");
-  if (!descriptionUser) return;
+  if (!element.descriptionUser) return;
 
   if (
     localStorageCurrentUser &&
     localStorageCurrentUser.description &&
     localStorageCurrentUser.description.length > 0
   ) {
-    descriptionUser.textContent = localStorageCurrentUser.description;
+    element.descriptionUser.textContent = localStorageCurrentUser.description;
   } else {
-    descriptionUser.textContent = "Расскажите нам о себе!";
+    element.descriptionUser.textContent = "Расскажите нам о себе!";
   }
 }
 
@@ -94,60 +83,43 @@ function updateUserInUsersArray(updatedUser) {
 
 // Функция слайдера для аккаунтов
 function initAccountSlider() {
-  const buttonNextAcc = document.querySelector(".buttonNext");
-  const buttonPrevAcc = document.querySelector(".buttonPrev");
-  const accountSocialLink = document.querySelectorAll(".account");
-
   let currentSlide1 = 0;
 
-  console.log("Инициализация слайдера аккаунтов:");
-  console.log("- Кнопка Далее:", buttonNextAcc);
-  console.log("- Кнопка Назад:", buttonPrevAcc);
-  console.log("- Элементов account:", accountSocialLink.length);
-
-  // Если нет элементов для слайдера, выходим
-  if (accountSocialLink.length === 0) {
+  if (element.accountSocialLinkAll.length === 0) {
     console.error("Элементы .account не найдены");
     return;
   }
 
-  // Показываем первый слайд при загрузке
   accountSliderModal(currentSlide1);
 
-  // Обработчик кнопки "Далее"
-  if (buttonNextAcc) {
-    buttonNextAcc.addEventListener("click", function () {
+  if (element.buttonNextAcc) {
+    element.buttonNextAcc.addEventListener("click", function () {
       console.log("Клик по кнопке Далее");
       currentSlide1 = accountSliderModal(currentSlide1 + 1);
     });
   }
 
-  // Обработчик кнопки "Назад"
-  if (buttonPrevAcc) {
-    buttonPrevAcc.addEventListener("click", function () {
+  if (element.buttonPrevAcc) {
+    element.buttonPrevAcc.addEventListener("click", function () {
       console.log("Клик по кнопке Назад");
       currentSlide1 = accountSliderModal(currentSlide1 - 1);
     });
   }
 
-  // Функция управления слайдером аккаунтов
   function accountSliderModal(n) {
     const slides = document.querySelectorAll(".account");
     if (slides.length === 0) return currentSlide1;
 
-    // Вычисляем новый индекс
     const newIndex = ((n % slides.length) + slides.length) % slides.length;
 
     console.log(
       `Переключение слайдов: старый индекс ${currentSlide1}, новый индекс ${newIndex}`
     );
 
-    // Скрываем все слайды
     slides.forEach((slide) => {
       slide.classList.add("hidden");
     });
 
-    // Показываем текущий слайд
     slides[newIndex].classList.remove("hidden");
 
     return newIndex;
@@ -155,72 +127,51 @@ function initAccountSlider() {
 }
 
 document.addEventListener("click", function (e) {
-  // Создание textarea при нажатии на кнопку редактирования
   if (e.target.classList.contains("button__change__descriptionUser")) {
-    console.log("Открытие редактора описания");
+    element.descriptionAndButton.classList.add("hidden");
+    console.log("был присвоен класс хидден ");
+    element.conteinerModal.classList.remove("hidden");
+    element.conteinerModal.classList.add("active");
 
-    conteinerDescp.classList.add("modaldescp");
-    conteinerDescp.innerHTML = `
-      <div class="conteiner__buttonModalDescp">
-        <button class="button_close_descp">&#10060;</button>
-        <button class="button_ok_descp">&#10004;</button>
-      </div>
-      <textarea class="textAreaDescp"></textarea>
-    `;
+    console.log(element.textArea.value);
 
-    const textarea = document.querySelector(".textAreaDescp");
     if (
-      textarea &&
+      element.textArea &&
       localStorageCurrentUser &&
       localStorageCurrentUser.description
     ) {
-      textarea.value = localStorageCurrentUser.description;
+      element.textArea.value = localStorageCurrentUser.description;
     }
   }
 
-  // Сохранение измененного описания
   if (e.target.classList.contains("button_ok_descp")) {
-    const textarea = document.querySelector(".textAreaDescp");
-    const textareaValue = textarea ? textarea.value.trim() : "";
-
-    // Проверяем, есть ли текущий пользователь
+    const textareaValue = element.textArea ? element.textArea.value.trim() : "";
     if (!localStorageCurrentUser) {
-      console.error("Нет данных текущего пользователя");
+      console.log("Нет текущего пользователя ");
       return;
     }
 
-    // Обновляем описание в currentUser
     localStorageCurrentUser.description = textareaValue;
-
-    // Сохраняем обновленного currentUser
     localStorage.setItem(
       "currentUser",
       JSON.stringify(localStorageCurrentUser)
     );
 
-    // ОБНОВЛЯЕМ ДАННЫЕ В МАССИВЕ USERS
     updateUserInUsersArray(localStorageCurrentUser);
-
-    // Возвращаем исходный вид
-    conteinerDescp.innerHTML = defaultDescp;
-    conteinerDescp.classList.remove("modaldescp");
-
-    // Обновляем отображение
+    element.descriptionAndButton.classList.remove("hidden");
+    console.log("был присвоен класс хидден ");
+    element.conteinerModal.classList.add("hidden");
+    element.conteinerModal.classList.remove("active");
     updateDescriptionDisplay();
-
-    console.log("Данные сохранены:");
-    console.log("- currentUser:", localStorageCurrentUser);
-    console.log(
-      "- Обновленный массив users:",
-      JSON.parse(localStorage.getItem("users") || "[]")
-    );
   }
 
-  // Обработка кнопки закрытия без сохранения
   if (e.target.classList.contains("button_close_descp")) {
-    conteinerDescp.innerHTML = defaultDescp;
-    conteinerDescp.classList.remove("modaldescp");
     updateDescriptionDisplay();
+
+    element.descriptionAndButton.classList.remove("hidden");
+    console.log("был присвоен класс хидден ");
+    element.conteinerModal.classList.add("hidden");
+    element.conteinerModal.classList.remove("active");
   }
 });
 

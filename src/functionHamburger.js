@@ -1,21 +1,23 @@
-export function initHamburger() {
-  const humburgerOpen = document.querySelector(".hamburger");
-  const humburgerClose = document.querySelector(".humburger__close");
-  const modalHumburger = document.querySelector(".modal__hamburger");
+import { elementHamburger } from "./selectors";
 
-  if (!humburgerOpen || !humburgerClose || !modalHumburger) {
+export function initHamburger() {
+  if (
+    !elementHamburger.humburgerOpen ||
+    !elementHamburger.humburgerClose ||
+    !elementHamburger.modalHumburger
+  ) {
     return;
   }
 
   function humburger(par) {
-    modalHumburger.classList[par]("active");
-    humburgerOpen.classList[par]("hidden");
+    elementHamburger.modalHumburger.classList[par]("active");
+    elementHamburger.humburgerOpen.classList[par]("hidden");
   }
 
-  humburgerOpen.addEventListener("click", function () {
+  elementHamburger.humburgerOpen.addEventListener("click", function () {
     humburger("add");
   });
-  humburgerClose.addEventListener("click", function () {
+  elementHamburger.humburgerClose.addEventListener("click", function () {
     humburger("remove");
   });
 }
