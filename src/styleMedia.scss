@@ -1,0 +1,492 @@
+@media (min-width: 320px) and (max-width: 576px) {
+  .body {
+    & h2 {
+      font-size: 2rem;
+    }
+
+    & p {
+      font-size: 1.5rem;
+    }
+  }
+  .header {
+    & .hamburger:hover {
+      box-shadow: 1px 1px 1px 2px black;
+    }
+    &::after {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .descriptionHeader {
+    align-items: center;
+    & h2 {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+    }
+    & p {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  header,
+  main,
+  footer {
+    padding: 0px;
+  }
+
+  .navSearchAndPersAccount {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & ul {
+      display: none;
+    }
+  }
+  .sectionOne {
+    align-items: center;
+    margin-top: 0;
+    & .sectionSlider {
+      height: auto;
+      width: 90%;
+    }
+    & .slider {
+      width: 100%;
+      align-items: center;
+
+      display: flex;
+    }
+    &::before {
+      width: 200px;
+    }
+    & .sectionSlider .img__slider {
+      width: 100%;
+      object-fit: contain;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .arrow-6 {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.1;
+    top: 40%;
+  }
+  .arrow__left {
+    left: 0;
+  }
+  .arrow__left:hover,
+  .arrow__rigth:hover {
+    background-color: transparent;
+    opacity: 1;
+  }
+  .arrow__rigth {
+    right: 0;
+  }
+  .slider {
+    width: 100%;
+  }
+  .sectionSliderConteiner {
+    position: relative;
+
+    & svg {
+      margin: 0;
+    }
+  }
+  .sectionTwoo {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    & h2 {
+      justify-content: center;
+    }
+  }
+  .sectionSlider_BtnLook {
+    box-shadow: 1px 1px 1px 1px black;
+    width: 100%;
+    width: 90%;
+  }
+
+  .sectionWatchLater {
+    grid-template-columns: repeat(1, auto);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sectionTree::before {
+    width: 100%;
+    top: -25%;
+  }
+
+  .sectionTree::after {
+    width: 100%;
+    bottom: -25%;
+  }
+  .sectionTree {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+    max-height: 100%;
+  }
+  .mainnews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 80%;
+      height: auto;
+    }
+    & p {
+      width: 80%;
+      font-size: 0.8rem;
+    }
+  }
+
+  .descriptionNews {
+    justify-content: center;
+
+    & p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .conteinerForum {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+
+    align-items: center;
+  }
+  .forum {
+    margin-top: 10px;
+  }
+  .forumDescription {
+    justify-content: center;
+    padding-left: 10px;
+
+    & P {
+      font-size: 0.8rem;
+    }
+  }
+  .sectionFo::before {
+    top: -15%;
+  }
+  .conteinerNewsLetter p {
+    font-size: 0.8rem;
+    padding: 20px;
+  }
+
+  footer ul {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .navSearchAndPersAccount {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+      font-size: 2.5rem;
+    }
+
+    & p {
+      font-size: 2rem;
+    }
+  }
+  header,
+  main,
+  footer {
+    padding: 0;
+  }
+  .header {
+    & button:hover {
+      box-shadow: 1px 1px 1px 2px black;
+    }
+    &::after {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .nav {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & ul {
+      display: none;
+    }
+  }
+  .descriptionHeader {
+    align-items: center;
+    & h2 {
+      text-align: center;
+    }
+  }
+  .sectionOne {
+    align-items: center;
+    & h2 {
+      justify-content: center;
+    }
+  }
+  .sectionOne::before {
+    width: 200px;
+  }
+
+  .sectionSlider {
+    width: 100%;
+    & .slider {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+  .arrow-6 {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.1;
+    top: 40%;
+  }
+  .arrow__left {
+    left: 20px;
+  }
+  .arrow__left:hover,
+  .arrow__rigth:hover {
+    background-color: transparent;
+    opacity: 1;
+  }
+  .arrow__rigth {
+    right: 20px;
+  }
+
+  .sectionSliderConteiner {
+    position: relative;
+    & svg {
+      margin: 0;
+    }
+  }
+
+  .sectionSlider_BtnLook {
+    box-shadow: 1px 1px 1px 1px black;
+    width: 100%;
+  }
+
+  .sectionWatchLater {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .sectionTree::before {
+    width: 100%;
+    top: -22%;
+  }
+
+  .sectionTree::after {
+    width: 100%;
+    bottom: -22%;
+  }
+  .conteinerNewsandNewsAll {
+    padding: 10px;
+  }
+  .sectionTwoo {
+    margin-top: 0;
+    & h2 {
+      justify-content: center;
+    }
+  }
+
+  .sectionTree {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+    max-height: none;
+  }
+  .mainnews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 80%;
+      height: auto;
+    }
+    & p {
+      width: 80%;
+      font-size: 0.8rem;
+    }
+  }
+
+  .descriptionNews {
+    justify-content: center;
+
+    & p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .conteinerForum {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+
+    align-items: center;
+  }
+  .forum {
+    margin-top: 10px;
+  }
+  .forumDescription {
+    justify-content: center;
+    padding-left: 10px;
+
+    & P {
+      font-size: 0.8rem;
+    }
+  }
+  .sectionFo::before {
+    top: -10%;
+  }
+  .conteinerNewsLetter p {
+    font-size: 0.8rem;
+    padding: 20px;
+  }
+
+  footer ul {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .descriptionHeader {
+    align-items: center;
+
+    & h2 {
+      font-size: 4rem;
+      text-align: center;
+    }
+    & p {
+      max-width: none;
+    }
+  }
+  header,
+  main,
+  footer {
+    padding: 0 20px;
+  }
+  .sectionSlider {
+    height: auto;
+  }
+  .conteinerNewsandNewsAll h2 {
+    padding-left: 10px;
+  }
+  .btn__full__list {
+    margin-right: 10px;
+  }
+  .descriptionNews {
+    height: auto;
+    gap: 10px;
+    padding-right: 10px;
+  }
+  .sectionTwoo h2 {
+    font-size: 2rem;
+  }
+
+  .sectionTree::before {
+    width: 100%;
+    top: -50%;
+  }
+
+  .sectionTree::after {
+    width: 100%;
+    bottom: -50%;
+  }
+
+  .forum {
+    margin-top: 10px;
+  }
+  .forumDescription {
+    & p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+  .sectionTree::before {
+    width: 100%;
+    top: -45%;
+  }
+
+  .sectionTree::after {
+    width: 100%;
+    bottom: -45%;
+  }
+
+  .forum {
+    margin-top: 10px;
+  }
+  .forumDescription {
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    & P {
+      font-size: 1rem;
+    }
+    & h3 {
+      padding: 5px;
+    }
+  }
+
+  .mainnews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 80%;
+      height: auto;
+    }
+    & p {
+      width: 80%;
+      font-size: 0.8rem;
+    }
+  }
+
+  .descriptionNews {
+    justify-content: center;
+    gap: 5px;
+    & h3 {
+      font-size: 1.5rem;
+    }
+    & p {
+      font-size: 1rem;
+    }
+  }
+
+  .conteinerNewsLetter {
+    & p {
+      font-size: 1rem;
+    }
+  }
+}

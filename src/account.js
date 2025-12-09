@@ -1,7 +1,7 @@
 import "./account.scss";
-import "./style.scss";
 import { initHamburger } from "./functionHamburger.js";
 import { element } from "./selectors.js";
+import { initSlider } from "./functionSlider.js";
 
 console.log("Account page loaded");
 console.log("localStorage:", localStorage);
@@ -81,50 +81,11 @@ function updateUserInUsersArray(updatedUser) {
   }
 }
 
-// Функция слайдера для аккаунтов
-function initAccountSlider() {
-  let currentSlide1 = 0;
-
-  if (element.accountSocialLinkAll.length === 0) {
-    console.error("Элементы .account не найдены");
-    return;
-  }
-
-  accountSliderModal(currentSlide1);
-
-  if (element.buttonNextAcc) {
-    element.buttonNextAcc.addEventListener("click", function () {
-      console.log("Клик по кнопке Далее");
-      currentSlide1 = accountSliderModal(currentSlide1 + 1);
-    });
-  }
-
-  if (element.buttonPrevAcc) {
-    element.buttonPrevAcc.addEventListener("click", function () {
-      console.log("Клик по кнопке Назад");
-      currentSlide1 = accountSliderModal(currentSlide1 - 1);
-    });
-  }
-
-  function accountSliderModal(n) {
-    const slides = document.querySelectorAll(".account");
-    if (slides.length === 0) return currentSlide1;
-
-    const newIndex = ((n % slides.length) + slides.length) % slides.length;
-
-    console.log(
-      `Переключение слайдов: старый индекс ${currentSlide1}, новый индекс ${newIndex}`
-    );
-
-    slides.forEach((slide) => {
-      slide.classList.add("hidden");
-    });
-
-    slides[newIndex].classList.remove("hidden");
-
-    return newIndex;
-  }
-}
+initSlider(
+  element.accountSocialLinkAll,
+  element.buttonNextAcc,
+  element.buttonPrevAcc
+);
 
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("button__change__descriptionUser")) {
@@ -180,5 +141,5 @@ updateDescriptionDisplay();
 
 // Запускаем слайдер аккаунтов после загрузки DOM
 document.addEventListener("DOMContentLoaded", function () {
-  initAccountSlider();
+  // initAccountSlider();
 });

@@ -1,23 +1,3 @@
-import { elementSlider } from "./selectors";
-
-export function initSlider() {
-  let currentSlide = 0;
-
-  // Инициализация - показываем первый слайд
-  if (elementSlider.sliderImage.length > 0) {
-    elementSlider.sliderImage.forEach((el) => el.classList.add("hidden"));
-    elementSlider.sliderImage[0].classList.remove("hidden");
-  }
-
-  elementSlider.buttonArrowRigth.addEventListener("click", function () {
-    currentSlide = sliderModal(currentSlide + 1, elementSlider.sliderImage);
-  });
-
-  elementSlider.buttonArrowLeft.addEventListener("click", function () {
-    currentSlide = sliderModal(currentSlide - 1, elementSlider.sliderImage);
-  });
-}
-
 export function sliderModal(n, slide) {
   // Проверяем, что slide существует и это NodeList/массив
   if (!slide || slide.length === 0) {
@@ -40,4 +20,22 @@ export function sliderModal(n, slide) {
 
   // Возвращаем новый индекс для сохранения состояния
   return newIndex;
+}
+
+export function initSlider(slideElement, buttonR, buttonL) {
+  let currentSlide = 0;
+
+  // Инициализация - показываем первый слайд
+  if (slideElement.length > 0) {
+    slideElement.forEach((el) => el.classList.add("hidden"));
+    slideElement[0].classList.remove("hidden");
+  }
+
+  buttonR.addEventListener("click", function () {
+    currentSlide = sliderModal(currentSlide + 1, slideElement);
+  });
+
+  buttonL.addEventListener("click", function () {
+    currentSlide = sliderModal(currentSlide - 1, slideElement);
+  });
 }

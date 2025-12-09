@@ -18,7 +18,7 @@ const selectors = {
     //selectorдля слайдера
     buttonArrowLeft: ".arrow__left",
     buttonArrowRigth: ".arrow__rigth",
-    slideImage: ".img__slider",
+    slideImageAll: ".img__slider",
   },
 
   selectorHamburger: {
@@ -30,11 +30,7 @@ const selectors = {
   },
   selectorAuth: {
     buttonRegistarationUserAll: ".btn__registr__user",
-    loginToProfile: ".loginToProfileOrRegistr",
-    showModalInputAll: ".showModalInput",
-    conteinerLoginPtofile: ".conteinerLoginPtofile",
-    showModalForm: ".showModalForm",
-    conteinerButtonShowModal: ".conteiner__button__show__modal",
+    templateModal: ".template__modal__auth",
   },
 };
 
@@ -62,7 +58,7 @@ export const element = {
 export const elementSlider = {
   buttonArrowLeft: funcSelect(selectors.selectorSlide.buttonArrowLeft),
   buttonArrowRigth: funcSelect(selectors.selectorSlide.buttonArrowRigth),
-  sliderImage: funcSelect(selectors.selectorSlide.slideImage),
+  sliderImageAll: funcSelectAll(selectors.selectorSlide.slideImageAll),
 };
 
 export const elementHamburger = {
@@ -75,14 +71,5 @@ export const elementAunth = {
   buttonRegistarationUserAll: funcSelectAll(
     selectors.selectorAuth.buttonRegistarationUserAll
   ),
-  loginToProfile: funcSelect(selectors.selectorAuth.loginToProfile),
-  showModalInputAll: funcSelectAll(selectors.selectorAuth.showModalInputAll),
-
-  conteinerLoginPtofile: funcSelect(
-    selectors.selectorAuth.conteinerLoginPtofile
-  ),
-  showModalForm: funcSelect(selectors.selectorAuth.showModalForm),
-  conteinerButtonShowModal: funcSelect(
-    selectors.selectorAuth.conteinerButtonShowModal
-  ),
+  templateModal: funcSelect(selectors.selectorAuth.templateModal),
 };

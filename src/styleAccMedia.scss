@@ -1,0 +1,182 @@
+@media (min-width: 320px) and (max-width: 576px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 0px;
+    & .conteiner_info_user {
+      align-items: center;
+      justify-content: center;
+      & .conteiner_user {
+        gap: 10px;
+      }
+    }
+
+    & h2,
+    & h3 {
+      white-space: nowrap;
+      font-size: 1.5rem;
+    }
+    & .card_user {
+      padding: 0;
+    }
+    & .textAreaDescp {
+      width: 150px;
+      height: 100px;
+    }
+    & .button__change__descriptionUser {
+      top: -35%;
+    }
+
+    & p {
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+  }
+
+  .conteiner_socialLinks_user {
+    gap: 0;
+    grid-template-columns: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    & button {
+      position: absolute;
+      font-size: 2.5rem;
+      transition: 1s ease-in;
+      opacity: 0.5;
+    }
+    & button:hover {
+      opacity: 1;
+    }
+    & .buttonPrev {
+      left: 0;
+      transition: 1s ease-in;
+
+      &:hover {
+        transform: translateX(-100px) scale(3);
+      }
+    }
+    & .buttonNext {
+      transition: 1s ease-in;
+      right: 0;
+
+      &:hover {
+        transform: translateX(100px) scale(3);
+      }
+    }
+  }
+  .conteiner_love_cinema_user {
+    justify-content: center;
+    align-items: center;
+  }
+  .conteinerName {
+    & h2 {
+      font-size: 1.5rem;
+      white-space: pre-wrap;
+    }
+  }
+  .conteiner_love_cinema {
+    grid-template-columns: repeat(auto);
+    align-items: center;
+    justify-content: center;
+  }
+  .card_cinema {
+    justify-content: center;
+  }
+  .card_trend {
+    flex-direction: column;
+    max-height: 100%;
+    align-items: center;
+  }
+  .card {
+    box-sizing: border-box;
+    flex: 1;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 20px 10px;
+
+    & h2,
+    & h3 {
+      white-space: nowrap;
+      font-size: 2rem;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+
+  .conteiner_socialLinks_user {
+    gap: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    & button {
+      position: absolute;
+      font-size: 2.5rem;
+      transition: 1s ease-in;
+      opacity: 0.5;
+    }
+    & button:hover {
+      opacity: 1;
+    }
+    & .buttonPrev {
+      left: 0;
+      transition: 1s ease-in;
+
+      &:hover {
+        transform: translateX(-100px) scale(3);
+      }
+    }
+    & .buttonNext {
+      transition: 1s ease-in;
+      right: 0;
+
+      &:hover {
+        transform: translateX(100px) scale(3);
+      }
+    }
+  }
+  .conteiner_love_cinema_user {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .conteinerName {
+    display: flex;
+    justify-content: space-between;
+    & h2 {
+      font-size: 1.5rem;
+      white-space: pre-wrap;
+    }
+  }
+  .conteiner_love_cinema {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+  .card_cinema {
+    justify-content: space-between;
+    max-width: 100%;
+  }
+  .card_trend {
+    flex-direction: column;
+    max-height: 100%;
+    align-items: center;
+  }
+  .card {
+    box-sizing: border-box;
+    flex: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
